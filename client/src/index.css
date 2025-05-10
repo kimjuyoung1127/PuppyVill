@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Puppyville pastel colors */
+  --background: 30 100% 98%; /* Light ivory background */
+  --foreground: 20 10% 20%; /* Dark text for readability */
+  --muted: 30 30% 96%;
+  --muted-foreground: 20 10% 40%;
+  --popover: 30 100% 98%;
+  --popover-foreground: 20 10% 20%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 10% 20%;
+  --border: 340 70% 90%; /* Light pink border */
+  --input: 30 30% 96%;
+  --primary: 330 85% 65%; /* Pink */
+  --primary-foreground: 0 0% 100%;
+  --secondary: 35 100% 96%; /* Light beige */
+  --secondary-foreground: 20 10% 20%;
+  --accent: 20 90% 85%; /* Light orange/peach */
+  --accent-foreground: 20 10% 20%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --ring: 330 85% 65%;
+  --radius: 0.75rem;
+
+  /* Custom colors for Puppyville */
+  --puppyville-pink: 330 85% 65%;
+  --puppyville-beige: 35 80% 95%;
+  --puppyville-peach: 20 90% 85%;
+  --puppyville-ivory: 30 100% 98%;
+  --puppyville-brown: 25 60% 40%;
+}
+
+.dark {
+  --background: 240 10% 4%;
+  --foreground: 0 0% 98%;
+  --muted: 240 4% 16%;
+  --muted-foreground: 240 5% 65%;
+  --popover: 240 10% 4%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 4%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 4% 16%;
+  --input: 240 4% 16%;
+  --primary: 221 83% 53%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 240 4% 16%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 4% 16%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 5% 65%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Hide scrollbar but allow scrolling */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom gradients */
+.gradient-primary {
+  @apply bg-gradient-to-r from-primary to-blue-600;
+}
+
+/* Animation utilities */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
