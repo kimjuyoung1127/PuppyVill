@@ -1,0 +1,76 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: lightblue;
+    padding: 1em;
+    border-bottom: 1px solid #ccc;
+}
+
+header div { /* Logo Placeholder */
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+main section {
+    padding: 2em;
+    border-bottom: 1px solid #eee;
+}
+
+#hero {
+    background-color: lightgreen;
+}
+
+#intro-video {
+    background-color: lightpink;
+}
+
+#programs-overview {
+    background-color: lightyellow;
+}
+
+#testimonials {
+    background-color: lightcyan;
+}
+
+#key-benefits {
+    background-color: lavender;
+}
+
+.video-responsive-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.video-responsive-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
